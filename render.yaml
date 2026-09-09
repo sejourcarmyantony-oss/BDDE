@@ -6,6 +6,8 @@ services:
     buildCommand: npm install
     startCommand: npm start
     envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
       - key: OWNER_PHONE
         sync: false
       - key: AI_API_KEY
@@ -14,7 +16,4 @@ services:
         sync: false
       - key: AUDD_API_KEY
         sync: false
-    disk:
-      name: shadow-bot-session
-      mountPath: /opt/render/project/src/session
-      sizeGB: 1
+        
