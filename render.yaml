@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: shadow-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: OWNER_PHONE
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: IMAGE_API_KEY
+        sync: false
+      - key: AUDD_API_KEY
+        sync: false
+    disk:
+      name: shadow-bot-session
+      mountPath: /opt/render/project/src/session
+      sizeGB: 1

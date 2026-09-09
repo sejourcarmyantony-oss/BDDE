@@ -1,0 +1,8 @@
+node_modules/
+session/
+.env
+media/tmp/
+groupdata.json
+autoreplies.json
+settings.json
+npm-debug.log
